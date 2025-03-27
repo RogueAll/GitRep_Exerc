@@ -26,7 +26,20 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //pictureBox1.Image.RotateFlip(GlobVar.rotatorointaor);
+            switch (GlobVar.rotatorointaor) {
+                case 90:
+                    pictureBox1.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                    break;
+                case 180:
+                    pictureBox1.Image.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                    break;
+                case 270:
+                    pictureBox1.Image.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                    break;
+
+            }
+            
+            Refresh();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -50,6 +63,11 @@ namespace WinFormsApp1
                 }
 
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
