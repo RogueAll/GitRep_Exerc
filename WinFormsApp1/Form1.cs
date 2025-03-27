@@ -67,7 +67,8 @@ namespace WinFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            pictureBox1.Image.RotateFlip(RotateFlipType.RotateNoneFlipY);
+            Refresh();
         }
     }
 }
