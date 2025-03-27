@@ -83,8 +83,9 @@
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
             button5.TabIndex = 4;
-            button5.Text = "button5";
+            button5.Text = "Load";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // radioButton1
             // 
@@ -126,7 +127,8 @@
             // 
             pictureBox1.Location = new Point(96, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(298, 223);
+            pictureBox1.Size = new Size(291, 223);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
             // 
@@ -134,7 +136,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(435, 284);
             Controls.Add(pictureBox1);
             Controls.Add(radioButton3);
             Controls.Add(radioButton2);

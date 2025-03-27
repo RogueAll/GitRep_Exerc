@@ -24,7 +24,12 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //pictureBox1.Image.RotateFlip(GlobVar.rotatorointaor);
+        }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image=Image.FromFile(@"C:\Users\student\Desktop\picture.jpg");
         }
     }
 }
