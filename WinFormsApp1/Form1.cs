@@ -26,7 +26,8 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            switch (GlobVar.rotatorointaor) {
+            switch (GlobVar.rotatorointaor)
+            {
                 case 90:
                     pictureBox1.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
                     break;
@@ -38,7 +39,7 @@ namespace WinFormsApp1
                     break;
 
             }
-            
+
             Refresh();
         }
 
@@ -69,6 +70,26 @@ namespace WinFormsApp1
         {
             pictureBox1.Image.RotateFlip(RotateFlipType.RotateNoneFlipY);
             Refresh();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Bitmap pic = new Bitmap(pictureBox1.Image);
+            for (int y = 0; (y
+                        <= (pic.Height - 1)); y++)
+            {
+                for (int x = 0; (x<= (pic.Width - 1)); x++)
+                {
+                    Color inv = pic.GetPixel(x, y); 
+                    if (inv.G< (inv.R-13) || inv.G< (inv.B-20) ) {
+                        
+                        inv = Color.FromArgb(255, (0), (0), (0));
+                        pic.SetPixel(x, y, inv);
+                        pictureBox1.Image = pic;
+                    }
+                }
+
+            }
         }
     }
 }

@@ -78,6 +78,7 @@
             button4.TabIndex = 3;
             button4.Text = "button4";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
