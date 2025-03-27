@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace WinFormsApp1
 {
     public partial class Form1 : Form
@@ -30,6 +32,24 @@ namespace WinFormsApp1
         private void button5_Click(object sender, EventArgs e)
         {
             pictureBox1.Image=Image.FromFile(@"C:\Users\student\Desktop\picture.jpg");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Bitmap pic = new Bitmap(pictureBox1.Image);
+            for (int y = 0; (y
+                        <= (pic.Height - 1)); y++)
+            {
+                for (int x = 0; (x
+                            <= (pic.Width - 1)); x++)
+                {
+                    Color inv = pic.GetPixel(x, y);
+                    inv = Color.FromArgb(255, (255 - inv.R), (255 - inv.G), (255 - inv.B));
+                    pic.SetPixel(x, y, inv);
+                    pictureBox1.Image = pic;
+                }
+
+            }
         }
     }
 }
